@@ -571,6 +571,8 @@ Before flashing the firmware, the StickS3 must be placed into **download/program
 15. Connect the GPS/GNSS module.
 16. Configure the appropriate baud rate in the firmware if necessary.
 
+## ESP Tool JS screenshots
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-1.png" alt="ESPTool 1" width="70%">
 </p>
