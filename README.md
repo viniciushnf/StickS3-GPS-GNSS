@@ -217,6 +217,10 @@ Both were tested with the GPS/GNSS setup used during development and worked corr
   <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
 </p>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-config-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
+</p>
+
 **GPS & GNSS Monitor** is a dedicated firmware created specifically for monitoring GPS/GNSS information on the StickS3.
 
 It focuses on making positioning information easy to read and access without requiring the user to navigate through unrelated features.
