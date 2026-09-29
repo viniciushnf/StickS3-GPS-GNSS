@@ -692,6 +692,21 @@ However, GPS/GNSS performance will always depend on the connected receiver, ante
 
 ---
 
+# 👋 Get in touch
+
+If you build this project, I'd love to see the result! 
+
+If you have any questions, suggestions, or run into any issues, feel free to contact me on Instagram. 
+
+I'm always happy to help, receive feedback, and see what the community creates. 
+
+I'm also open to collaborations and partnership opportunities related to electronics, embedded systems, and open-source projects.
+
+* Instagram: **@viniciushnf**
+* [instagram.com/viniciushnf](https://www.instagram.com/viniciushnf/)
+
+---
+
 # 🔗 Related Projects
 
 ### GPS & GNSS Monitor
@@ -718,6 +733,22 @@ The modified Bruce firmware is based on the original Bruce project:
 
 ---
 
+# 🙏 Acknowledgments
+
+Special thanks to **REYAX** for providing the **RYS352A GNSS module** used during the development and testing of this project.
+
+Thank you for supporting the project and for providing a module that performed very well during testing.
+
+---
+
+## ⭐ If You Find This Project Useful
+
+If this project helps you turn your StickS3 into a practical GPS/GNSS device, consider giving the repository a ⭐ on GitHub.
+
+Enjoy experimenting with GPS and GNSS!
+
+---
+
 # 📄 License
 
 This repository contains multiple components with different licenses.
@@ -737,19 +768,3 @@ See the license information included with each firmware where applicable.
 The documentation and original written content of this repository are provided under the license specified for the repository documentation.
 
 Third-party software, libraries, firmware, trademarks, and other materials remain subject to their respective licenses and terms.
-
----
-
-# 🙏 Acknowledgments
-
-Special thanks to **REYAX** for providing the **RYS352A GNSS module** used during the development and testing of this project.
-
-Thank you for supporting the project and for providing a module that performed very well during testing.
-
----
-
-## ⭐ If You Find This Project Useful
-
-If this project helps you turn your StickS3 into a practical GPS/GNSS device, consider giving the repository a ⭐ on GitHub.
-
-Enjoy experimenting with GPS and GNSS!
