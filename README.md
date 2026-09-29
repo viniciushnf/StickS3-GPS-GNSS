@@ -573,17 +573,17 @@ Before flashing the firmware, the StickS3 must be placed into **download/program
 
 ## Flashing Procedure
 
-1. Connect the StickS3 to your computer using USB.
-2. Open [ESP Tool JS](https://espressif.github.io/esptool-js/) in Google Chrome.
-3. Put the StickS3 into programming mode.
-4. Select the StickS3's **COM port**.
+1. Put the StickS3 into programming mode.
+2. Connect the StickS3 to your computer using USB.
+3. Download the desired `.bin` file from this repository.
+4. Open [ESP Tool JS](https://espressif.github.io/esptool-js/) in Google Chrome.
 5. Set the baud rate to `115200`.
-6. Set **Flash Address** to `0x0`.
-7. Set **Flash Mode** to `dio`.
-8. Set **Flash Frequency** to `80m`.
-9. Set **Flash Size** to `8MB`.
-10. Download the desired `.bin` file from this repository.
-11. Select the `.bin` file in ESP Tool JS.
+6. Select the StickS3's **COM port**.
+7. Select the `.bin` file in ESP Tool JS.
+8. Set **Flash Address** to `0x0`.
+9. Set **Flash Mode** to `dio`.
+10. Set **Flash Frequency** to `80m`.
+11. Set **Flash Size** to `8MB`.
 12. Start the flashing process.
 13. Wait for the process to finish.
 14. Restart the StickS3.
@@ -595,7 +595,6 @@ Before flashing the firmware, the StickS3 must be placed into **download/program
 | Firmware                  | File                        |
 | ------------------------- | --------------------------- |
 | GPS & GNSS Monitor        | `GPS_GNSS_Monitor.bin`      |
-| GPS & GNSS Monitor Source | `GPS_GNSS_Monitor.ino`      |
 | Bruce Modified            | `Bruce-m5stack-sticks3.bin` |
 
 ---
@@ -651,26 +650,6 @@ The tests included:
 Both firmware options worked correctly during my tests.
 
 However, GPS/GNSS performance will always depend on the connected receiver, antenna, environment, satellite visibility, and signal conditions.
-
----
-
-# 📁 Repository Files
-
-The main files provided in this repository are:
-
-```text
-StickS3-GPS-GNSS/
-│
-├── README.md
-│
-├── Bruce-m5stack-sticks3.bin
-│
-├── GPS_GNSS_Monitor.bin
-│
-└── GPS_GNSS_Monitor.ino
-```
-
-Additional documentation, images, and hardware resources may also be added to this repository.
 
 ---
 
