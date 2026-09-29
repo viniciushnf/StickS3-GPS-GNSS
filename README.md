@@ -193,13 +193,13 @@ For these reasons, the RYS352A is a module I strongly recommend for this project
 
 ### Official RYS352A page
 
-[REYAX RYS352A — Official Product Page](https://reyax.com/product/GPS-GNSS/RYS352A)
+[Official Product Page: https://reyax.com/product/GPS-GNSS/RYS352A](https://reyax.com/product/GPS-GNSS/RYS352A)
 
 ### Where to buy
 
-* [DigiKey — REYAX RYS352A](https://www.digikey.com/en/products/detail/reyax/RYS352A/22206992)
-* [eBay — REYAX RYS352A](https://www.ebay.com/itm/187031730034)
-* [Amazon — REYAX RYS352A](https://www.amazon.com/dp/B0CM5JTJL7?lv=shuf&language=zh_TW&channelId=500&plpRedirect=mhFallback)
+* [DigiKey: https://www.digikey.com/en/products/detail/reyax/RYS352A/22206992](https://www.digikey.com/en/products/detail/reyax/RYS352A/22206992)
+* [eBay: https://www.ebay.com/itm/187031730034](https://www.ebay.com/itm/187031730034)
+* [Amazon: https://www.amazon.com/dp/B0CM5JTJL7](https://www.amazon.com/dp/B0CM5JTJL7?lv=shuf&language=zh_TW&channelId=500&plpRedirect=mhFallback)
 
 > **Disclosure:** The RYS352A used during development and testing was provided by REYAX. The opinions about the module above are based on my own experience using it with this project.
 
@@ -539,7 +539,7 @@ Bruce-m5stack-sticks3.bin
 
 Both firmware options can be installed on the StickS3 using the same flashing procedure with **ESP Tool JS**.
 
-[ESP Tool JS — Espressif](https://espressif.github.io/esptool-js/)
+[Espressif ESP Tool JS: https://espressif.github.io/esptool-js/](https://espressif.github.io/esptool-js/)
 
 > **Recommendation:** Use **Google Chrome** when accessing ESP Tool JS, as it generally provides the best Web Serial support for this type of browser-based flashing tool.
 
@@ -549,18 +549,11 @@ When flashing either firmware, use the following settings:
 
 | ESP Tool JS Setting | Value    |
 | ------------------- | -------- |
+| **Baudrate**        | `115200` |
 | **Flash Address**   | `0x0`    |
 | **Flash Mode**      | `dio`    |
 | **Flash Frequency** | `80m`    |
 | **Flash Size**      | `8MB`    |
-| **Baudrate**        | `115200` |
-
-The firmware files are:
-
-```text
-GPS_GNSS_Monitor.bin
-Bruce-m5stack-sticks3.bin
-```
 
 ## Entering Programming Mode
 
