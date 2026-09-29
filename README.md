@@ -304,6 +304,7 @@ The firmware includes dedicated screens for:
 | **Course**       | Direction of travel                                    |
 | **Time**         | GPS/GNSS date and time                                 |
 | **Session Info** | Information about the current GPS/GNSS session         |
+| **About**        | Information about the developer, baud rate, TX and RX  |
 | **Settings**     | Firmware configuration                                 |
 
 <p align="center">
