@@ -148,34 +148,26 @@ A good HDOP value does not guarantee a specific real-world accuracy, and a highe
 
 # 🧩 Hardware Assembly
 
-For this project, a small **custom PCB** was developed to make the physical connection between the StickS3 and the GPS/GNSS module more practical and compact.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/pcb-1.jpg" alt="PCB" width="70%">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/photo-6.jpg" alt="Photo" width="70%">
+</p>
 
-The PCB is intended to simplify the wiring and create a more integrated portable assembly instead of relying on loose jumper wires.
+For my hardware setup, I soldered the necessary pins to a small PCB and wired the GPS/GNSS module and the StickS3 together.
 
-The exact physical arrangement can be adapted depending on the GPS/GNSS module being used.
+This creates a compact assembly where the GPS/GNSS module and the StickS3 remain firmly attached to each other.
 
-The basic electrical connection remains:
-
-```text
-             GPS/GNSS Module
-             ┌───────────────┐
-             │               │
-        TX ──┤───────────────┼──→ GPIO 44 / RX
-        RX ──┤───────────────┼──→ GPIO 43 / TX
-       GND ──┤───────────────┼──→ GND
-       VCC ──┤───────────────┼──→ Compatible VCC
-             │               │
-             └───────────────┘
-```
-
-The custom PCB is especially useful for:
+This type of assembly is especially useful for:
 
 * Portable GPS/GNSS testing
-* Navigation
 * Field experiments
-* Development
-* Prototyping
+* Navigation
+* Development and prototyping
 * Long-term monitoring
+
+The exact mechanical assembly can be adapted according to the GPS/GNSS module being used.
 
 ---
 
@@ -216,6 +208,10 @@ Both were tested with the GPS/GNSS setup used during development and worked corr
 ---
 
 # 📍 GPS & GNSS Monitor
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
+</p>
 
 **GPS & GNSS Monitor** is a dedicated firmware created specifically for monitoring GPS/GNSS information on the StickS3.
 
@@ -354,6 +350,10 @@ A dedicated repository with more detailed information about GPS & GNSS Monitor i
 ---
 
 # 🦈 Bruce — Modified Firmware
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-info.gif" alt="Bruce GPS Info Screens" width="70%">
+</p>
 
 The second option is a **modified version of Bruce Firmware**.
 
@@ -543,18 +543,6 @@ Both firmware options can be installed on the StickS3 using the same flashing pr
 
 > **Recommendation:** Use **Google Chrome** when accessing ESP Tool JS, as it generally provides the best Web Serial support for this type of browser-based flashing tool.
 
-## Required Settings
-
-When flashing either firmware, use the following settings:
-
-| ESP Tool JS Setting | Value    |
-| ------------------- | -------- |
-| **Baudrate**        | `115200` |
-| **Flash Address**   | `0x0`    |
-| **Flash Mode**      | `dio`    |
-| **Flash Frequency** | `80m`    |
-| **Flash Size**      | `8MB`    |
-
 ## Entering Programming Mode
 
 Before flashing the firmware, the StickS3 must be placed into **download/programming mode**.
@@ -582,6 +570,23 @@ Before flashing the firmware, the StickS3 must be placed into **download/program
 14. Restart the StickS3.
 15. Connect the GPS/GNSS module.
 16. Configure the appropriate baud rate in the firmware if necessary.
+
+## Required Settings
+
+When flashing either firmware, use the following settings:
+
+| ESP Tool JS Setting | Value    |
+| ------------------- | -------- |
+| **Baudrate**        | `115200` |
+| **Flash Address**   | `0x0`    |
+| **Flash Mode**      | `dio`    |
+| **Flash Frequency** | `80m`    |
+| **Flash Size**      | `8MB`    |
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptools-2.png" alt="ESPTool" width="70%">
+</p>
+
 
 ### Firmware Files
 
