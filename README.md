@@ -522,11 +522,11 @@ For this project, the StickS3 GPS UART pins are:
 
 | Function |   GPIO |
 | -------- | -----: |
-| TX       | **43** |
 | RX       | **44** |
+| TX       | **43** |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/bruce-gps-pins.jpg" alt="Bruce GPS Pins" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/bruce-gps-pins.jpg" alt="Bruce GPS Pins" width="50%">
 </p>
 
 Therefore:
