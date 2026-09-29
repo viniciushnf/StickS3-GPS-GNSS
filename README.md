@@ -571,6 +571,18 @@ Before flashing the firmware, the StickS3 must be placed into **download/program
 15. Connect the GPS/GNSS module.
 16. Configure the appropriate baud rate in the firmware if necessary.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-1.png" alt="ESPTool 1" width="70%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-2.png" alt="ESPTool 2" width="70%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-3.png" alt="ESPTool 3" width="70%">
+</p>
+
 ## Required Settings
 
 When flashing either firmware, use the following settings:
@@ -582,10 +594,6 @@ When flashing either firmware, use the following settings:
 | **Flash Mode**      | `dio`    |
 | **Flash Frequency** | `80m`    |
 | **Flash Size**      | `8MB`    |
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptools-2.png" alt="ESPTool" width="70%">
-</p>
 
 
 ### Firmware Files
