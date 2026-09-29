@@ -213,14 +213,6 @@ Both were tested with the GPS/GNSS setup used during development and worked corr
 
 # 📍 GPS & GNSS Monitor
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-config-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
-</p>
-
 **GPS & GNSS Monitor** is a dedicated firmware created specifically for monitoring GPS/GNSS information on the StickS3.
 
 It focuses on making positioning information easy to read and access without requiring the user to navigate through unrelated features.
@@ -313,6 +305,34 @@ The firmware includes dedicated screens for:
 | **Time**         | GPS/GNSS date and time                                 |
 | **Session Info** | Information about the current GPS/GNSS session         |
 | **Settings**     | Firmware configuration                                 |
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
+</p>
+
+## Configuration Screens
+
+The firmware includes dedicated screens for configuring the device and GPS/GNSS monitoring preferences:
+
+| Screen             | Configuration                                   |
+| -------------------| ------------------------------------------------|
+| **Color**          | Theme color                                     |
+| **Brightness**     | Display brightness                              |
+| **Screen Timeout** | Turns off the screen if there is no interaction |
+| **Coord. Format**  | Coordinate format                               |
+| **Speed Unit**     | Speed measurement unit                          |
+| **Altitude Unit**  | Altitude measurement unit                       |
+| **Distance Unit**  | Distance measurement unit                       |
+| **Timezone**       | Time zone used to display local date and time   |
+| **Time Format**    | Time display formats                            |
+| **Date Format**    | Date display formats                            |
+| **Baud Rate**      | GPS/GNSS module communication baud rate         |
+| **Reset Trip**     | Reset trip data and route statistics            |
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-config-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
+</p>
 
 ## Advantages
 
