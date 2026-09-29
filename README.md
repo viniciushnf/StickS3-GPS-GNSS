@@ -707,6 +707,14 @@ I'm also open to collaborations and partnership opportunities related to electro
 
 ---
 
+## ⭐ If You Find This Project Useful
+
+If this project helps you turn your StickS3 into a practical GPS/GNSS device, consider giving the repository a ⭐ on GitHub.
+
+Enjoy experimenting with GPS and GNSS!
+
+---
+
 # 🔗 Related Projects
 
 ### GPS & GNSS Monitor
@@ -738,14 +746,6 @@ The modified Bruce firmware is based on the original Bruce project:
 Special thanks to **REYAX** for providing the **RYS352A GNSS module** used during the development and testing of this project.
 
 Thank you for supporting the project and for providing a module that performed very well during testing.
-
----
-
-## ⭐ If You Find This Project Useful
-
-If this project helps you turn your StickS3 into a practical GPS/GNSS device, consider giving the repository a ⭐ on GitHub.
-
-Enjoy experimenting with GPS and GNSS!
 
 ---
 
