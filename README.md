@@ -95,16 +95,7 @@ You must also verify the **TX output voltage of the GPS/GNSS module** before con
   <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.png" alt="Wiring Diagram" width="70%">
 </p>
 
-The UART connection must be crossed:
-
-```text
-GPS/GNSS TX  →  StickS3 GPIO 44 (RX)
-GPS/GNSS RX  →  StickS3 GPIO 43 (TX)
-GPS/GNSS GND →  StickS3 GND
-GPS/GNSS VCC →  Compatible power supply
-```
-
-> **⚠️ Never assume that a GPS/GNSS module can be powered directly from the StickS3. Check the module's datasheet and the voltage available from your hardware setup first.**
+> **⚠️ Check the module's datasheet and the voltage available from your hardware setup first.**
 
 The same applies to the UART signal levels. The module's TX output must be electrically compatible with the StickS3 RX input.
 
