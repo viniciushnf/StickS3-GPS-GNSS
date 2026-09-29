@@ -329,6 +329,7 @@ The firmware includes dedicated screens for configuring the device and GPS/GNSS 
 | **Date Format**    | Date display formats                            |
 | **Baud Rate**      | GPS/GNSS module communication baud rate         |
 | **Reset Trip**     | Reset trip data and route statistics            |
+| **Exit**           | Return to the General screen                    |
 
 
 <p align="center">
