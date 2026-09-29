@@ -381,10 +381,6 @@ A dedicated repository with more detailed information about GPS & GNSS Monitor i
 
 # 🦈 Bruce — Modified Firmware
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-info.gif" alt="Bruce GPS Info Screens" width="70%">
-</p>
-
 The second option is a **modified version of Bruce Firmware**.
 
 The original Bruce firmware already provides a large collection of tools and features for the StickS3. I modified it by adding a dedicated screen called **GPS Info**.
@@ -396,6 +392,10 @@ Original Bruce Firmware:
 [Bruce Firmware — GitHub](https://github.com/BruceDevices/firmware)
 
 ## Main GPS Info Features
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-info.gif" alt="Bruce GPS Info Screens" width="70%">
+</p>
 
 The added **GPS Info** interface provides several screens:
 
@@ -481,7 +481,6 @@ When saving data, you can define:
 
 * The place/location name
 * The file name
-* The storage location
 
 The generated file is stored inside:
 
@@ -525,6 +524,10 @@ For this project, the StickS3 GPS UART pins are:
 | -------- | -----: |
 | TX       | **43** |
 | RX       | **44** |
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/bruce-gps-pins.jpg" alt="Bruce GPS Pins" width="70%">
+</p>
 
 Therefore:
 
