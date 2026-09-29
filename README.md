@@ -91,6 +91,10 @@ You must also verify the **TX output voltage of the GPS/GNSS module** before con
 | GND         | **GND**                     |
 | VCC         | **Compatible power supply** |
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.png" alt="Wiring Diagram" width="70%">
+</p>
+
 The UART connection must be crossed:
 
 ```text
