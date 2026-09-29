@@ -388,10 +388,6 @@ Original Bruce Firmware:
 
 ## Main GPS Info Features
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-info.gif" alt="Bruce GPS Info Screens" width="70%">
-</p>
-
 The added **GPS Info** interface provides several screens:
 
 * General GPS information
@@ -431,6 +427,10 @@ GPS Position
    ↓
 GPS Info
 ```
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-info.gif" alt="Bruce GPS Info Screens" width="70%">
+</p>
 
 The same navigation can be used in the opposite direction using the corresponding previous/back navigation action supported by Bruce.
 
