@@ -328,7 +328,7 @@ The firmware includes dedicated screens for configuring the device and GPS/GNSS 
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-config-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor-config.gif" alt="GPS & GNSS Monitor Screens" width="70%">
 </p>
 
 ## Advantages
