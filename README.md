@@ -17,15 +17,15 @@ This repository includes:
 * Compatible module requirements
 * Firmware installation instructions
 * Configuration instructions
-* Information about the custom PCB used for the hardware assembly
+* Hardware assembly information
 * Basic usage instructions for both firmware options
 
 The two firmware options are:
 
-| Firmware               | Main Purpose                      | Main Advantage                                                                 | Main Disadvantage                                                               |
-| ---------------------- | --------------------------------- | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| **GPS & GNSS Monitor** | Dedicated GPS/GNSS monitoring     | Simple interface focused entirely on GPS/GNSS data                             | Focused mainly on GPS/GNSS functionality                                        |
-| **Bruce Modified**     | GPS/GNSS information inside Bruce | Combines GPS/GNSS monitoring with the many features already available in Bruce | GPS/GNSS configuration and interface are integrated into a much larger firmware |
+| Firmware               | Main Purpose                                                                                                                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **GPS & GNSS Monitor** | Dedicated firmware for monitoring GPS/GNSS positioning, satellite, movement, distance, route, and time information                                                                          |
+| **Bruce Modified**     | Bruce firmware with all its existing features, enhanced with a new **GPS Info** screen for viewing satellites, HDOP, course, speed, altitude, date, time, timezone, latitude, and longitude |
 
 ---
 
@@ -72,6 +72,20 @@ Other modules may also work if they provide compatible NMEA data through UART.
 
 > **Important:** Compatibility is not determined only by the communication protocol. Always check the electrical specifications of the GPS/GNSS module before connecting it to the StickS3.
 
+Examples of compatible modules include:
+
+| Module       | Manufacturer | Type |
+| ------------ | ------------ | ---- |
+| **RYS352A**  | REYAX        | GNSS |
+| **NEO-6M**   | u-blox       | GPS  |
+| **NEO-M8N**  | u-blox       | GNSS |
+| **NEO-M9N**  | u-blox       | GNSS |
+| **MAX-M10S** | u-blox       | GNSS |
+| **ATGM336H** | Various      | GNSS |
+| **L76K**     | Quectel      | GNSS |
+
+> Note: Compatibility depends on the module's electrical interface, UART configuration, NMEA output, and supply voltage. Always check the module's datasheet before connecting it to the StickS3.
+
 ---
 
 # ⚠️ Voltage and Electrical Compatibility
@@ -90,10 +104,6 @@ You must also verify the **TX output voltage of the GPS/GNSS module** before con
 | GPS/GNSS RX | **GPIO 43 (TX)**            |
 | GND         | **GND**                     |
 | VCC         | **Compatible power supply** |
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.png" alt="Wiring Diagram" width="70%">
-</p>
 
 > **⚠️ Check the module's datasheet and the voltage available from your hardware setup first.**
 
@@ -163,6 +173,17 @@ This type of assembly is especially useful for:
 * Long-term monitoring
 
 The exact mechanical assembly can be adapted according to the GPS/GNSS module being used.
+
+### StickS3 pins
+
+| GPS/GNSS pin | StickS3                     |
+| ------------ | --------------------------- |
+| TX           | **GPIO 44 (RX)**            |
+| RX           | **GPIO 43 (TX)**            |
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.png" alt="Wiring Diagram" width="70%">
+</p>
 
 ---
 
@@ -250,9 +271,9 @@ The **Route Stats** screen provides statistics related to the current trip, incl
 * Maximum altitude
 * Moving time
 
-The route distance is calculated by accumulating the distance between consecutive GNSS positions while the device is considered to be moving.
+The route distance is calculated by accumulating the distance between consecutive GPS/GNSS positions while the device is considered to be moving.
 
-> **Important:** Route Stats is an **estimate**, not a precision surveying measurement. GNSS positioning naturally contains small variations, and these variations can affect the calculated distance.
+> **Important:** Route Stats is an **estimate**, not a precision surveying measurement. GPS/GNSS positioning naturally contains small variations, and these variations can affect the calculated distance.
 
 The firmware uses a minimum movement threshold to reduce the effect of small GNSS variations while the device is stationary, but this cannot completely eliminate measurement errors.
 
@@ -345,12 +366,6 @@ The firmware includes dedicated screens for configuring the device and GPS/GNSS 
 * GPS/GNSS communication warning
 * Source code is available
 
-## Disadvantages
-
-* It is primarily focused on GPS/GNSS monitoring
-* It does not provide the large collection of additional features available in Bruce
-* Users who already use Bruce may prefer having GPS/GNSS functionality integrated into Bruce instead
-
 ### Available Files
 
 This repository provides:
@@ -382,9 +397,7 @@ The original Bruce firmware already provides a large collection of tools and fea
 
 The goal is to make GPS/GNSS information available while keeping the rest of the Bruce environment.
 
-Original Bruce Firmware:
-
-[Bruce Firmware — GitHub](https://github.com/BruceDevices/firmware)
+Original Bruce Firmware: [Bruce Firmware — GitHub](https://github.com/BruceDevices/firmware)
 
 ## Main GPS Info Features
 
@@ -434,7 +447,7 @@ GPS Info
 
 The same navigation can be used in the opposite direction using the corresponding previous/back navigation action supported by Bruce.
 
-The GPS Info menu can also be opened to access additional options.
+Press the A button to access the menu. In the menu, you can save data and change the units of measurement for speed and altitude.
 
 ## Speed and Altitude Units
 
@@ -476,12 +489,6 @@ When saving data, you can define:
 
 * The place/location name
 * The file name
-
-The generated file is stored inside:
-
-```text
-BruceGPS_data
-```
 
 To access the saved file, open the **Bruce file explorer** and navigate to the `BruceGPS_data` folder.
 
@@ -546,13 +553,6 @@ If the baud rate is incorrect, the firmware may not be able to correctly decode 
 * LittleFS and SD Card support for saved data
 * Useful for users who already use Bruce
 
-## Disadvantages
-
-* GPS/GNSS functionality is part of a much larger firmware
-* Configuration is done through Bruce's existing GPS menu
-* The interface is less focused exclusively on GPS/GNSS than the dedicated GPS & GNSS Monitor firmware
-* The modified firmware depends on the Bruce project and its licensing terms
-
 ### Available File
 
 The modified Bruce firmware is provided as:
@@ -575,10 +575,9 @@ Both firmware options can be installed on the StickS3 using the same flashing pr
 
 Before flashing the firmware, the StickS3 must be placed into **download/programming mode**.
 
-1. Turn on or connect the StickS3.
-2. Press and hold the **Power button**.
-3. Keep the button pressed until the indicator LED starts flashing.
-4. The StickS3 is now ready to be programmed.
+1. Press and hold the **Power button**.
+2. Keep the button pressed until the indicator LED starts flashing.
+3. The StickS3 is now ready to be programmed.
 
 ## Flashing Procedure
 
@@ -630,32 +629,6 @@ When flashing either firmware, use the following settings:
 | ------------------------- | --------------------------- |
 | GPS & GNSS Monitor        | `GPS_GNSS_Monitor.bin`      |
 | Bruce Modified            | `Bruce-m5stack-sticks3.bin` |
-
----
-
-# 🔧 First Setup
-
-After installing either firmware:
-
-1. Connect the GPS/GNSS module to the StickS3.
-2. Verify the power supply voltage.
-3. Verify the module TX signal voltage.
-4. Verify the TX/RX connections.
-5. Make sure the selected baud rate matches the module.
-6. Place the GPS/GNSS antenna in an area with good visibility of the sky.
-7. Wait for the receiver to acquire a FIX.
-8. Check the GPS/GNSS information on the display.
-
-The first FIX can take longer depending on:
-
-* Receiver type
-* Antenna
-* Satellite visibility
-* Current location
-* Signal conditions
-* Previous receiver state
-* Assistance data
-* Environmental conditions
 
 ---
 
