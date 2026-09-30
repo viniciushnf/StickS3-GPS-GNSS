@@ -72,7 +72,9 @@ Other modules may also work if they provide compatible NMEA data through UART.
 
 > **Important:** Compatibility is not determined only by the communication protocol. Always check the electrical specifications of the GPS/GNSS module before connecting it to the StickS3.
 
-Examples of compatible modules include:
+### Examples of Compatible Modules
+
+The following are examples of GPS/GNSS modules that use UART and provide NMEA data:
 
 | Module       | Manufacturer | Type |
 | ------------ | ------------ | ---- |
@@ -181,6 +183,8 @@ The exact mechanical assembly can be adapted according to the GPS/GNSS module be
 | ------------ | --------------------------- |
 | TX           | **GPIO 44 (RX)**            |
 | RX           | **GPIO 43 (TX)**            |
+| GND          | GND                         |
+| VCC          | Compatible power supply     |
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.png" alt="Wiring Diagram" width="70%">
@@ -345,7 +349,7 @@ The firmware includes dedicated screens for configuring the device and GPS/GNSS 
   <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor-config.gif" alt="GPS & GNSS Monitor Screens" width="70%">
 </p>
 
-## Advantages
+## Main Features
 
 * Dedicated GPS/GNSS interface
 * Simple and focused user experience
@@ -533,7 +537,7 @@ GPS/GNSS RX → StickS3 GPIO 43 (TX)
 
 If the baud rate is incorrect, the firmware may not be able to correctly decode the data received from the module.
 
-## Advantages
+## Main Features
 
 * GPS/GNSS information integrated directly into Bruce
 * Keeps the other Bruce features available
