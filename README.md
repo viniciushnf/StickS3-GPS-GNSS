@@ -84,7 +84,8 @@ Examples of compatible modules include:
 | **ATGM336H** | Various      | GNSS |
 | **L76K**     | Quectel      | GNSS |
 
-> Note: Compatibility depends on the module's electrical interface, UART configuration, NMEA output, and supply voltage. Always check the module's datasheet before connecting it to the StickS3.
+> **⚠️ Important:** Before connecting a GPS/GNSS module to the StickS3, always check the module's datasheet and verify its **power supply voltage, UART logic levels, pinout, and communication settings**. Specifications may vary between manufacturers, module models, and breakout boards. Make sure that the module is electrically compatible with the StickS3 before connecting it.
+
 
 ---
 
