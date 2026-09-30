@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/cover.webp" alt="Cover" width="100%">
+</p>
+
 # StickS3 with GPS and GNSS
 
 Turn your **M5StickS3** into a compact and practical GPS/GNSS device.
