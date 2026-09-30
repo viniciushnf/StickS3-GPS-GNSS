@@ -220,14 +220,6 @@ Thank you to **REYAX** for providing the RYS352A for development and testing.
 
 ---
 
-# 🧭 Firmware Options
-
-There are two firmware options available in this project.
-
-Both were tested with the GPS/GNSS setup used during development and worked correctly.
-
----
-
 # 📍 GPS & GNSS Monitor
 
 **GPS & GNSS Monitor** is a dedicated firmware created specifically for monitoring GPS/GNSS information on the StickS3.
