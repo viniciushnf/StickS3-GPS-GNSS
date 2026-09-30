@@ -429,7 +429,7 @@ GPS Info
 ```
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-info.gif" alt="Bruce GPS Info Screens" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-bruce.gif" alt="Bruce GPS Info Screens" width="70%">
 </p>
 
 The same navigation can be used in the opposite direction using the corresponding previous/back navigation action supported by Bruce.
@@ -521,7 +521,7 @@ For this project, the StickS3 GPS UART pins are:
 | TX       | **43** |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/bruce-gps-pins.jpg" alt="Bruce GPS Pins" width="50%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screen-bruce-gps-pins.jpg" alt="Bruce GPS Pins" width="50%">
 </p>
 
 Therefore:
