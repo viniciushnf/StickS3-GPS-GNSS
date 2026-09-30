@@ -179,7 +179,7 @@ According to the manufacturer, the module operates from a typical **3.3 V supply
 For these reasons, the RYS352A is a module I strongly recommend for this project when looking for good quality, positioning performance, and fast FIX acquisition.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/REYAX-RYS352A.jpg" alt="REYAX RYS352A" width="50%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/RYS352A.png" alt="REYAX RYS352A" width="70%">
 </p>
 
 ### Official RYS352A page
