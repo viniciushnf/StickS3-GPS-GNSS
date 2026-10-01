@@ -568,7 +568,7 @@ Bruce-m5stack-sticks3.bin
 
 Both firmware options can be installed on the StickS3 using the same flashing procedure with **ESP Tool JS**.
 
-[Espressif ESP Tool JS: https://espressif.github.io/esptool-js/](https://espressif.github.io/esptool-js/)
+Espressif ESP Tool JS: [https://espressif.github.io/esptool-js/](https://espressif.github.io/esptool-js/)
 
 > **Recommendation:** Use **Google Chrome** when accessing ESP Tool JS, as it generally provides the best Web Serial support for this type of browser-based flashing tool.
 
@@ -585,7 +585,7 @@ Before flashing the firmware, the StickS3 must be placed into **download/program
 1. Put the StickS3 into programming mode.
 2. Connect the StickS3 to your computer using USB.
 3. Download the desired `.bin` file from this repository.
-4. Open [ESP Tool JS](https://espressif.github.io/esptool-js/) in Google Chrome.
+4. Open [ESP Tool JS](https://espressif.github.io/esptool-js/).
 5. Set the baud rate to `115200`.
 6. Select the StickS3's **COM port**.
 7. Select the `.bin` file in ESP Tool JS.
