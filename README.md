@@ -374,19 +374,33 @@ This repository provides:
 * `GPS_GNSS_Monitor.bin`
 * `GPS_GNSS_Monitor.ino`
 
-GPS & GNSS Monitor can also be installed directly through **M5Burner**.
+## M5Burner
 
-Open M5Burner, search for:
+The **GPS & GNSS Monitor** firmware is also available directly through **M5Burner**, making it easy to install the firmware on your StickS3 without manually downloading the firmware file.
 
-```text
-GPS & GNSS Monitor
-```
+### Access the Firmware
 
-and install the firmware for the StickS3.
+You can access the firmware in either of the following ways:
+
+* Visit [M5Burner](https://burner.m5stack.com/), select **StickS3**, and search for **GPS & GNSS Monitor**.
+* Open the firmware directly through [this link](https://burner.m5stack.com/85KU9L).
+
+> **💡 Recommendation:** For the best experience when using M5Burner, I recommend using **Google Chrome**.
+
+### Installing the Firmware with M5Burner
+
+1. Connect the **StickS3** to your computer using a **USB cable**.
+2. Put the StickS3 into **programming mode** by pressing and holding the **Power** button until the indicator light starts blinking.
+3. Open [M5Burner](https://burner.m5stack.com/) using **Google Chrome**.
+4. Select **StickS3** and search for **GPS & GNSS Monitor**, or open the [direct firmware page](https://burner.m5stack.com/85KU9L).
+5. Follow the M5Burner instructions to select the StickS3 and upload the firmware.
+6. Wait for the installation to complete. Once finished, the StickS3 will be ready to use with the **GPS & GNSS Monitor** firmware.
+
+## Repository dedicated to the GPS and GNSS Monitor
 
 A dedicated repository with more detailed information about GPS & GNSS Monitor is available here:
 
-[GPS & GNSS Monitor — GitHub](https://github.com/viniciushnf/M5StickS3-GPS-GNSS-Monitor)
+[github.com/viniciushnf/M5StickS3-GPS-GNSS-Monitor](https://github.com/viniciushnf/M5StickS3-GPS-GNSS-Monitor)
 
 ---
 
