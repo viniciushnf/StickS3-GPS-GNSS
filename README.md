@@ -386,7 +386,7 @@ The **GPS & GNSS Monitor** firmware is also available directly through **M5Burne
 
 You can access the firmware in either of the following ways:
 
-* Visit [M5Burner](https://burner.m5stack.com/), select **StickS3**, and search for **GPS & GNSS Monitor**.
+* Visit [M5Burner](https://burner.m5stack.com/), select **StickS3**, and search for `GPS & GNSS Monitor`.
 * Open the firmware directly through [this link](https://burner.m5stack.com/85KU9L).
 
 > **💡 Recommendation:** For the best experience when using M5Burner, I recommend using **Google Chrome**.
