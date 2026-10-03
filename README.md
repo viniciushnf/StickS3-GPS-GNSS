@@ -378,6 +378,10 @@ This repository provides:
 
 The **GPS & GNSS Monitor** firmware is also available directly through **M5Burner**, making it easy to install the firmware on your StickS3 without manually downloading the firmware file.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/m5burner-gps-gnss-monitor.webp" alt="GPS & GNSS Monitor Screens" width="70%">
+</p>
+
 ### Access the Firmware
 
 You can access the firmware in either of the following ways:
