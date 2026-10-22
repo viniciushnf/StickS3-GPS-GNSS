@@ -271,47 +271,11 @@ Main features include:
 
 The firmware also provides an introductory startup screen displaying the firmware name, version, and developer's GitHub address.
 
-### Route Stats
-
-The **Route Stats** screen provides statistics for the current trip, including:
-
-- Total accumulated route distance.
-- Average moving speed.
-- Minimum and maximum speed.
-- Minimum and maximum altitude.
-- Time in Motion.
-
-The third Route Stats view displays **TIME IN MOTION** instead of the previous trip-time field.
-
-Route distance is accumulated from consecutive GPS/GNSS positions while the reported speed meets or exceeds the configured minimum trip speed.
-
-The `Min. Trip Speed` setting allows you to adjust this threshold from `0` to `10 km/h`, in increments of `0.5 km/h`.
-
-A minimum speed threshold can help reduce unwanted distance accumulation caused by GPS/GNSS position drift while the device is stationary. However, route distance remains an estimate rather than a precision surveying measurement.
-
-### Time in Motion
-
-**Time in Motion** is the accumulated time during which the GPS/GNSS-reported speed is equal to or greater than the configured minimum trip speed.
-
-This value is different from the total trip time:
-
-- **Time in Motion:** Time accumulated while the speed meets the minimum trip speed threshold.
-- **Trip Time:** Elapsed time since the trip started.
-- **Fix Time:** Elapsed time since the first valid GPS/GNSS fix was obtained.
-
-Time in Motion is displayed on the `Session Info` screen and in the route statistics. The minimum trip speed can be adjusted through the Settings menu.
-
-### Persistent Settings
-
-The GPS & GNSS Monitor firmware stores its configuration in the ESP32's non-volatile storage (NVS).
-
-The available settings can be edited directly through the device's Settings menu, including UART configuration, display colors, orientation, screen timeout, screen update interval, module timeout, minimum trip speed, measurement units, and date and time formats.
-
-Settings are saved automatically when changed and are normally retained after restarting or powering off the device.
-
-This allows users to customize the firmware without modifying the source code for ordinary configuration changes.
-
 ## Main Screens
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
+</p>
 
 The firmware includes the following screens:
 
@@ -329,23 +293,11 @@ The firmware includes the following screens:
 | **About** | Firmware information and a second view containing developer and GitHub repository information. |
 | **Settings** | Firmware configuration options. |
 
-### About Screen
-
-The About screen provides firmware information. Press **Button A** to switch to a second About view containing the developer information and a link to the firmware's GitHub repository. Press Button A again to return to the first view.
-
-### Session Info
-
-The Session Info screen displays three time-related values:
-
-- **Time in Motion**
-- **Trip Time**
-- **Fix Time**
+## Configuration Screens
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor Screens" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor-config.gif" alt="GPS & GNSS Monitor Screens" width="70%">
 </p>
-
-## Configuration Screens
 
 The Settings menu provides the following configuration options:
 
@@ -421,11 +373,6 @@ Available options:
 - `10 minutes`
 
 GPS/GNSS data processing continues while the display is off. Press **Button A** to turn the display back on.
-
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor-config.gif" alt="GPS & GNSS Monitor Screens" width="70%">
-</p>
 
 ## Button Controls
 
