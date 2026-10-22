@@ -103,14 +103,21 @@ Different GPS/GNSS modules can require different supply voltages. Some modules o
 
 You must also verify the **TX output voltage of the GPS/GNSS module** before connecting it to the StickS3 RX pin.
 
-### StickS3 UART pins
+### Recommended M5StickS3 Connections
 
-| Signal      | StickS3                     |
-| ----------- | --------------------------- |
-| GPS/GNSS TX | **GPIO 44 (RX)**            |
-| GPS/GNSS RX | **GPIO 43 (TX)**            |
-| GND         | **GND**                     |
-| VCC         | **Compatible power supply** |
+The recommended GPIO configuration depends on the connection interface.
+
+**Hat2-Bus**
+
+- Configure G44 as RX and G43 as TX.
+- Connect the GPS/GNSS module's TX to G44.
+- Connect the GPS/GNSS module's RX to G43, following the recommended Hat2-Bus wiring.
+
+**HY2.0-4P**
+
+- Configure G10 as RX and G9 as TX.
+- Connect the GPS/GNSS module's TX to G10.
+- Connect the GPS/GNSS module's RX to G9.
 
 > **⚠️ Check the module's datasheet and the voltage available from your hardware setup first.**
 
