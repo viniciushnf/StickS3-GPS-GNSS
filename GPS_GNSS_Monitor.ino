@@ -10,6 +10,7 @@
 
 // Developed by ViniciusHNF
 // https://github.com/viniciushnf/M5StickS3-GPS-GNSS-Monitor
+// https://github.com/viniciushnf/StickS3-GPS-GNSS
 // https://youtube.com/@ViniciusHNF
 
 // IMPORTANT:
