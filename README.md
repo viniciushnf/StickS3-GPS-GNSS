@@ -14,14 +14,14 @@ The main goal is to make GPS/GNSS data easy to access in a portable device, whet
 
 This repository includes:
 
+* Compatible module requirements
+* Instructions for connecting a GPS/GNSS module
+* Hardware assembly information
+* Configuration instructions
 * Two firmware options for the StickS3
 * Precompiled `.bin` firmware files
 * Source code for **GPS & GNSS Monitor**
-* Instructions for connecting a GPS/GNSS module
-* Compatible module requirements
 * Firmware installation instructions
-* Configuration instructions
-* Hardware assembly information
 * Basic usage instructions for both firmware options
 
 The two firmware options are:
