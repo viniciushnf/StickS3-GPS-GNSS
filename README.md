@@ -33,205 +33,106 @@ The two firmware options are:
 
 ---
 
-# 📡 GPS vs GNSS
+## 📡 GPS/GNSS Module Compatibility and Electrical Safety
 
-Although the terms **GPS** and **GNSS** are often used interchangeably, they are not exactly the same.
+### What makes a module compatible?
 
-**GPS** is the satellite navigation system operated by the United States.
+The firmware is designed for GPS/GNSS receivers that output standard **NMEA data over UART** and can be configured to use one of the supported baud rates. The firmware uses UART communication in `SERIAL_8N1` format: 8 data bits, no parity, and 1 stop bit.
 
-**GNSS** is the broader term for satellite navigation systems and can include multiple constellations, such as:
+A module is not guaranteed to work simply because it is described as a GPS or GNSS module. Before connecting one, check its documentation to confirm that it can output compatible NMEA data over UART, that its baud rate is supported, and that its voltage and logic levels are safe for the StickS3. Verify compatibility before testing an unfamiliar module.
 
-* GPS — United States
-* GLONASS — Russia
-* Galileo — European Union
-* BeiDou — China
-* QZSS — Japan
-* Other regional augmentation systems
-
-A GNSS receiver can potentially use multiple satellite constellations at the same time, depending on the receiver's hardware and configuration.
-
-Therefore, this project is compatible with both **GPS and GNSS modules** as long as the module meets the communication and electrical requirements described below.
-
-A module does not need to be limited to GPS. A multi-constellation GNSS receiver can also be used.
-
----
-
-# 🔌 Compatible GPS/GNSS Modules
-
-The project is designed for GPS/GNSS modules that provide positioning information through a **UART serial interface**, using a protocol supported by the firmware.
-
-The recommended communication format is:
-
-| Parameter   | Requirement                                |
-| ----------- | ------------------------------------------ |
-| Interface   | UART                                       |
-| Data        | Standard NMEA GPS/GNSS data                |
-| Data format | 8 data bits, no parity, 1 stop bit (`8N1`) |
-| Baud rate   | Must match the module configuration        |
-| Output      | GPS/GNSS positioning data                  |
-
-Common baud rates such as `9600`, `19200`, `38400`, `57600`, and `115200` can be used with the GPS & GNSS Monitor firmware.
-
-Other modules may also work if they provide compatible NMEA data through UART.
-
-> **Important:** Compatibility is not determined only by the communication protocol. Always check the electrical specifications of the GPS/GNSS module before connecting it to the StickS3.
-
-### Examples of Compatible Modules
-
-The following are examples of GPS/GNSS modules that use UART and provide NMEA data:
-
-| Module       | Manufacturer | Type |
-| ------------ | ------------ | ---- |
-| **RYS352A**  | REYAX        | GNSS |
-| **NEO-6M**   | u-blox       | GPS  |
-| **NEO-M8N**  | u-blox       | GNSS |
-| **NEO-M9N**  | u-blox       | GNSS |
-| **MAX-M10S** | u-blox       | GNSS |
-| **ATGM336H** | Various      | GNSS |
-| **L76K**     | Quectel      | GNSS |
+The following are examples of GPS/GNSS modules that use UART and provide NMEA data: **RYS352A, NEO-6M, NEO-M8N, BN-220, ATGM336H, MAX-M10S, and M5Stack GPS modules**
 
 > **⚠️ Important:** Before connecting a GPS/GNSS module to the StickS3, always check the module's datasheet and verify its **power supply voltage, UART logic levels, pinout, and communication settings**. Specifications may vary between manufacturers, module models, and breakout boards. Make sure that the module is electrically compatible with the StickS3 before connecting it.
 
+### GPS versus GNSS
+
+**GPS** is the satellite navigation system operated by the United States. **GNSS** is the broader term for Global Navigation Satellite Systems and can include GPS, Galileo, GLONASS, BeiDou, and other satellite constellations. A GNSS receiver that can use multiple constellations may be able to use more satellites in suitable conditions, but actual performance depends on the receiver, antenna, environment, and satellite visibility.
+
+### Baud rates
+
+The firmware offers these module baud rates:
+
+`9600`, `19200`, `38400`, `57600`, `115200`
+
+The selected rate must match the rate at which the module sends UART data. If the rates do not match, the StickS3 may receive unreadable data or no valid GPS/GNSS information. The baud rate selected in **Basic Settings** is the module communication rate; it is separate from the baud rate used by a computer when flashing the firmware.
+
+### Voltage and UART logic-level safety
+
+**Check voltage compatibility before connecting or powering the hardware.** The module's required supply voltage must be compatible with the voltage supplied by your chosen StickS3 connection (3.3 V or 5 V, depending on the connection and hardware specification). Do not assume that every module accepts either voltage.
+
+Also check the module's UART signal levels, especially its **TX output**, which connects to the StickS3's RX input. The StickS3's GPIO logic is 3.3 V; the signal delivered to its GPIO must stay within the level supported by the StickS3. A module powered from 5 V may still output 5 V UART logic, which can damage the StickS3 if connected directly. Use a suitable level shifter or other properly designed interface if the module's TX signal is not 3.3 V-compatible.
+
+Connect **GND to GND**, cross the UART signals correctly, and verify the module pinout before powering on:
+
+- Module **TX → StickS3 RX**
+- Module **RX ← StickS3 TX** (if the module requires receiving commands)
+- Module **GND ↔ StickS3 GND**
+
+The module's supply voltage and UART logic voltage are separate specifications; verify both in the module documentation.
+
+### Accuracy and receiver quality
+
+Different receivers, antennas, antenna placement, satellite visibility, signal strength, buildings, trees, reflections, atmospheric conditions, and other environmental factors can change fix acquisition time and the accuracy of position, speed, and altitude. The firmware displays and processes the information received from the receiver; it cannot create accuracy that the receiver's data does not provide.
+
+For more reliable results, use a good-quality module and antenna, allow the receiver time to acquire a stable fix, and test in an environment with a clear view of the sky when possible.
+
+### Recommended module: REYAX RYS352A
+
+I used the **REYAX RYS352A** during development and testing and strongly recommend it based on my experience. In my tests, it provided excellent positioning quality and precision and acquired satellites quickly. Results can still vary with antenna placement, environment, and satellite conditions.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/images/RYS352A.png" alt="REYAX RYS352A GNSS module" width="70%">
+</p>
+
+- **Official product page:** [reyax.com/product/GPS-GNSS/RYS352A](https://reyax.com/product/GPS-GNSS/RYS352A)
+- **DigiKey:** [digikey.com/en/products/detail/reyax/RYS352A/22206992](https://www.digikey.com/en/products/detail/reyax/RYS352A/22206992)
+- **eBay:** [ebay.com/itm/187031730034](https://www.ebay.com/itm/187031730034)
+- **Amazon:** [amazon.com/dp/B0CM5JTJL7](https://www.amazon.com/dp/B0CM5JTJL7?lv=shuf&language=zh_TW&channelId=500&plpRedirect=mhFallback)
 
 ---
 
-# ⚠️ Voltage and Electrical Compatibility
+## 🔌 Wiring Diagram and UART Configuration
 
-Pay particular attention to **power supply voltage** and **UART signal voltage**.
+UART uses crossed signal connections: the module's TX sends data to the firmware's RX, and the firmware's TX connects to the module's RX if communication in that direction is needed.
 
-Different GPS/GNSS modules can require different supply voltages. Some modules operate at 3.3 V, while others may require different voltages or include voltage regulation on their breakout board.
+### Recommended StickS3 connections
 
-You must also verify the **TX output voltage of the GPS/GNSS module** before connecting it to the StickS3 RX pin.
+For the M5StickS3, these are the recommended pin assignments described for the respective connector:
 
-### Recommended M5StickS3 Connections
+#### Hat2-Bus
+| StickS3 Pin | Configure as |
+|---|---|
+| **G44** | RX |
+| **G43** | TX |
 
-The recommended GPIO configuration depends on the connection interface.
+#### HY2.0-4P
+| StickS3 Pin | Configure as |
+|---|---|
+| **G10** | RX |
+| **G9** | TX |
 
-**Hat2-Bus**
-
-- Configure G44 as RX and G43 as TX.
-- Connect the GPS/GNSS module's TX to G44.
-- Connect the GPS/GNSS module's RX to G43, following the recommended Hat2-Bus wiring.
-
-**HY2.0-4P**
-
-- Configure G10 as RX and G9 as TX.
-- Connect the GPS/GNSS module's TX to G10.
-- Connect the GPS/GNSS module's RX to G9.
-
-> **⚠️ Check the module's datasheet and the voltage available from your hardware setup first.**
-
-The same applies to the UART signal levels. The module's TX output must be electrically compatible with the StickS3 RX input.
-
----
-
-# 🛰️ Position Accuracy
-
-The firmware does not determine the physical accuracy of the GPS/GNSS receiver. It receives, displays, and processes the information provided by the module.
-
-Different GPS/GNSS modules can have very different performance characteristics.
-
-Positioning accuracy can be affected by factors such as:
-
-* GPS/GNSS receiver quality
-* Antenna quality
-* Number of visible satellites
-* Satellite geometry
-* Signal strength
-* Indoor or outdoor environment
-* Buildings and other obstructions
-* Trees and terrain
-* Multipath effects
-* Atmospheric conditions
-* Receiver configuration
-* Update rate
-* Constellations supported by the receiver
-
-Therefore, two different modules running the same firmware can produce different results.
-
-A high-quality GNSS receiver with a good antenna and clear view of the sky can provide significantly better results than a low-cost receiver operating in a difficult environment.
-
-### HDOP
-
-Some of the firmware screens also display **HDOP (Horizontal Dilution of Precision)**.
-
-HDOP is an indicator related to the geometry of the satellites being used for the position calculation. In general, a lower HDOP indicates more favorable satellite geometry.
-
-However:
-
-> **HDOP is not a direct measurement of position accuracy in meters.**
-
-A good HDOP value does not guarantee a specific real-world accuracy, and a higher HDOP does not necessarily mean that the receiver is completely unusable.
-
----
-
-# 🧩 Hardware Assembly
+> Remember that the pin configured as RX on the StickS3 must be connected to the TX pin of the module, and the pin configured as TX on the StickS3 must be connected to the RX pin of the module.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/pcb-1.jpg" alt="PCB" width="70%">
-</p>
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/photo-6.jpg" alt="Photo" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/images/wiring-diagram.webp" alt="GPS/GNSS UART wiring diagram" width="100%">
 </p>
 
-For my hardware setup, I soldered the necessary pins to a small PCB and wired the GPS/GNSS module and the StickS3 together.
+Always confirm the pinout for your specific module and StickS3 connection before wiring. If the module only sends NMEA data and does not need to receive commands, its RX connection may not be needed for basic monitoring.
 
-This creates a compact assembly where the GPS/GNSS module and the StickS3 remain firmly attached to each other.
+### Available GPIOs and baud rates
 
-This type of assembly is especially useful for:
+RX and TX can each be selected from the following firmware options:
 
-* Portable GPS/GNSS testing
-* Field experiments
-* Navigation
-* Development and prototyping
-* Long-term monitoring
+`1`, `2`, `9`, `10`, `13`, `15`, `26`, `32`, `33`, `36`, `43`, `44`
 
-The exact mechanical assembly can be adapted according to the GPS/GNSS module being used.
+Available baud rates:
 
-### StickS3 pins
+`9600`, `19200`, `38400`, `57600`, `115200`
 
-| GPS/GNSS pin | StickS3                     |
-| ------------ | --------------------------- |
-| TX           | **GPIO 44 (RX)**            |
-| RX           | **GPIO 43 (TX)**            |
-| GND          | GND                         |
-| VCC          | Compatible power supply     |
+These settings are available on the **Basic Settings** screen. Press Button A to enter the configuration workflow, use Button B to cycle through the available choices, and press Button A to confirm each one. The same GPIO cannot be used for RX and TX.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.png" alt="Wiring Diagram" width="70%">
-</p>
-
----
-
-# ⭐ Tested GPS/GNSS Module — REYAX RYS352A
-
-During the development and testing of this project, I used the **REYAX RYS352A**, kindly provided by **REYAX**.
-
-I had a very good experience with this module during my tests. It provided excellent overall quality, good positioning precision, and fast FIX acquisition.
-
-The RYS352A is a multi-GNSS module supporting systems such as GPS, GLONASS, Galileo, BeiDou and QZSS, and provides a UART interface with NMEA output.
-
-According to the manufacturer, the module operates from a typical **3.3 V supply**, supports a default baud rate of **115200 bps**, and supports navigation update rates of up to **10 Hz**.
-
-For these reasons, the RYS352A is a module I strongly recommend for this project when looking for good quality, positioning performance, and fast FIX acquisition.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/RYS352A.png" alt="REYAX RYS352A" width="70%">
-</p>
-
-### Official RYS352A page
-
-[Official Product Page: https://reyax.com/product/GPS-GNSS/RYS352A](https://reyax.com/product/GPS-GNSS/RYS352A)
-
-### Where to buy
-
-* [DigiKey: https://www.digikey.com/en/products/detail/reyax/RYS352A/22206992](https://www.digikey.com/en/products/detail/reyax/RYS352A/22206992)
-* [eBay: https://www.ebay.com/itm/187031730034](https://www.ebay.com/itm/187031730034)
-* [Amazon: https://www.amazon.com/dp/B0CM5JTJL7](https://www.amazon.com/dp/B0CM5JTJL7?lv=shuf&language=zh_TW&channelId=500&plpRedirect=mhFallback)
-
-> **Disclosure:** The RYS352A used during development and testing was provided by REYAX. The opinions about the module above are based on my own experience using it with this project.
-
-Thank you to **REYAX** for providing the RYS352A for development and testing.
+The GPIO list includes pins intended to make the firmware adaptable to other hardware, including other M5Stack devices. Some listed pins may not be physically exposed on the M5StickS3, or may not be suitable for a particular connector or peripheral. Selecting a GPIO in the menu does not make it physically accessible. Check your board's pinout and confirm that the selected pins are available before connecting the module.
 
 ---
 
