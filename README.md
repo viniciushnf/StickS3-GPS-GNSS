@@ -82,7 +82,7 @@ For more reliable results, use a good-quality module and antenna, allow the rece
 I used the **REYAX RYS352A** during development and testing and strongly recommend it based on my experience. In my tests, it provided excellent positioning quality and precision and acquired satellites quickly. Results can still vary with antenna placement, environment, and satellite conditions.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/images/RYS352A.png" alt="REYAX RYS352A GNSS module" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/RYS352A.png" alt="REYAX RYS352A GNSS module" width="70%">
 </p>
 
 - **Official product page:** [reyax.com/product/GPS-GNSS/RYS352A](https://reyax.com/product/GPS-GNSS/RYS352A)
@@ -115,7 +115,7 @@ For the M5StickS3, these are the recommended pin assignments described for the r
 > Remember that the pin configured as RX on the StickS3 must be connected to the TX pin of the module, and the pin configured as TX on the StickS3 must be connected to the RX pin of the module.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/images/wiring-diagram.webp" alt="GPS/GNSS UART wiring diagram" width="100%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.webp" alt="GPS/GNSS UART wiring diagram" width="100%">
 </p>
 
 Always confirm the pinout for your specific module and StickS3 connection before wiring. If the module only sends NMEA data and does not need to receive commands, its RX connection may not be needed for basic monitoring.
