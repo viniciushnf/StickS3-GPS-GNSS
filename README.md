@@ -368,7 +368,7 @@ The added GPS Info interface provides several views:
 - **GPS Position:** geographic coordinates.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-bruce.gif" alt="GPS Info screens in Bruce Modified" width="75%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-bruce.gif" alt="GPS Info screens in Bruce Modified" width="50%">
 </p>
 
 While inside GPS Info, use **"Next"** to move to the next GPS screen and **"Previous"** to return to the previous screen. Use **"Select"** to open the menu.
@@ -409,7 +409,7 @@ In Bruce, open: `GPS → Config`
 Set the **Baudrate** to match the baud rate configured on the connected module. Follow the pin recommendations to configure RX and TX according to the interface you are using (Hat2-Bus or HY2.0-4P).
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screen-bruce-gps-pins.jpg" alt="GPS pin configuration in Bruce" width="55%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screen-bruce-gps-pins.jpg" alt="GPS pin configuration in Bruce" width="50%">
 </p>
 
 ### ➡️ Installing Bruce from a `.bin` File
