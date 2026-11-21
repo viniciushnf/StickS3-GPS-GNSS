@@ -261,7 +261,7 @@ Requirements:
 
 Steps:
 
-1. Download or clone the [GPS & GNSS Monitor repository](https://github.com/viniciushnf/M5StickS3-GPS-GNSS-Monitor).
+1. Download the file [GPS_GNSS_Monitor.ino](https://github.com/viniciushnf/StickS3-GPS-GNSS/blob/main/GPS_GNSS_Monitor.ino).
 2. Open `GPS_GNSS_Monitor.ino` in Arduino IDE.
 3. Install the required libraries through Library Manager if needed.
 4. Install the appropriate M5Stack board support and select **M5StickS3** as the board.
