@@ -150,13 +150,6 @@ For the complete documentation, detailed screen descriptions, configuration opti
 - **Persistent Settings:** Configuration preferences are saved and retained after restarting the device.
 - **Trip Reset:** Reset trip data and route statistics whenever needed.
 
-### ➡️ Hardware Compatibility
-
-- **M5Stack StickS3:** Designed specifically for the StickS3.
-- **GPS/GNSS Modules:** Compatible with modules providing standard NMEA data over UART.
-- **Configurable Baud Rate:** Supports common communication speeds from 9600 to 115200 baud.
-- **Communication Warning:** Detects communication interruptions and alerts the user.
-
 ### ➡️ Navigation
 
 The GPS & GNSS Monitor uses two physical buttons to navigate between screens and access settings. The interface is designed to be simple and intuitive, allowing users to quickly access GPS/GNSS information and customize the firmware.
