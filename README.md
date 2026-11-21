@@ -433,9 +433,9 @@ Download your preferred `.bin` file from the repository before starting. You can
 
 #### 2. Flash the firmware
 
-1. Open [ESP Tool JS](https://espressif.github.io/esptool-js/) in Google Chrome.
+1. Open ESP Tool: [https://espressif.github.io/esptool-js/](https://espressif.github.io/esptool-js/).
 2. Connect to the StickS3 and select its serial/COM port.
-3. Select `Bruce-m5stack-sticks3.bin` as the firmware file.
+3. Select the firmware BIN file.
 4. Use the settings below.
 5. Start the flashing process and wait for it to finish.
 6. Restart the StickS3 if it does not restart automatically.
