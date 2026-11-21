@@ -118,21 +118,7 @@ For the M5StickS3, these are the recommended pin assignments described for the r
   <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/wiring-diagram.webp" alt="GPS/GNSS UART wiring diagram" width="100%">
 </p>
 
-Always confirm the pinout for your specific module and StickS3 connection before wiring. If the module only sends NMEA data and does not need to receive commands, its RX connection may not be needed for basic monitoring.
-
-### Available GPIOs and baud rates
-
-RX and TX can each be selected from the following firmware options:
-
-`1`, `2`, `9`, `10`, `13`, `15`, `26`, `32`, `33`, `36`, `43`, `44`
-
-Available baud rates:
-
-`9600`, `19200`, `38400`, `57600`, `115200`
-
-These settings are available on the **Basic Settings** screen. Press Button A to enter the configuration workflow, use Button B to cycle through the available choices, and press Button A to confirm each one. The same GPIO cannot be used for RX and TX.
-
-The GPIO list includes pins intended to make the firmware adaptable to other hardware, including other M5Stack devices. Some listed pins may not be physically exposed on the M5StickS3, or may not be suitable for a particular connector or peripheral. Selecting a GPIO in the menu does not make it physically accessible. Check your board's pinout and confirm that the selected pins are available before connecting the module.
+> Always verify the pinout of your specific module and the connection on the StickS3 before proceeding with the wiring. If the module only transmits NMEA data and does not require receiving commands, the connection from the StickS3’s TX pin to the module’s RX pin may not be necessary for basic monitoring.
 
 ---
 
