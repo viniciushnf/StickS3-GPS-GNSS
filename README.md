@@ -219,10 +219,10 @@ M5Burner is the most convenient option if you do not want to download and flash 
   <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/m5burner-gps-gnss-monitor.webp" alt="GPS & GNSS Monitor in M5Burner" width="70%">
 </p>
 
-1. Open [M5Burner](https://burner.m5stack.com/) in Google Chrome.
-2. Select **StickS3** and search for `GPS & GNSS Monitor`, or open the [direct firmware page](https://burner.m5stack.com/A8XVKK).
-3. Press and hold the StickS3 **Power** button until the indicator LED starts blinking to enter programming mode.
-4. Connect the StickS3 to your computer with a USB cable.
+1. Press and hold the StickS3 **Power** button until the indicator LED starts blinking to enter programming mode.
+2. Connect the StickS3 to your computer with a USB cable.
+3. Open [M5Burner](https://burner.m5stack.com/) in Google Chrome.
+4. Select **StickS3** and search for `GPS & GNSS Monitor`, or open the direct firmware page:[burner.m5stack.com/A8XVKK](https://burner.m5stack.com/A8XVKK).
 5. Select the connected device/serial port when prompted and follow M5Burner's on-screen instructions.
 6. Wait for the installation to complete, then restart the device if needed.
 
