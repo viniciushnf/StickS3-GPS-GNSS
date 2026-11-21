@@ -154,9 +154,9 @@ For the complete documentation, detailed screen descriptions, configuration opti
 
 The GPS & GNSS Monitor uses two physical buttons to navigate between screens and access settings. The interface is designed to be simple and intuitive, allowing users to quickly access GPS/GNSS information and customize the firmware.
 
-- **Button A (Short Press):** Performs the action associated with the current screen or confirms a selection.
-- **Button B (Short Press):** Moves to the next screen or option.
-- **Button B (Long Press):** Returns to the previous screen or option.
+- **Button A - Short Press:** Performs the action associated with the current screen or confirms a selection.
+- **Button B - Short Press:** Moves to the next screen or option.
+- **Button B - Long Press:** Returns to the previous screen or option.
 
 ### ➡️ Main screens
 
