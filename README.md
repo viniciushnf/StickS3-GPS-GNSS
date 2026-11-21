@@ -353,274 +353,111 @@ A dedicated repository with more detailed information about GPS & GNSS Monitor i
 
 ---
 
-# 🦈 Bruce — Modified Firmware
+## 🦈 Bruce Firmware — Modified Version
 
-The second option is a **modified version of Bruce Firmware**.
+The **Bruce Modified** firmware is based on the original [Bruce Firmware](https://bruce.computer/). I modified it by adding a dedicated **GPS Info** interface for viewing data received from a connected GPS/GNSS module, while keeping Bruce's other features available.
 
-The original Bruce firmware already provides a large collection of tools and features for the StickS3. I modified it by adding a dedicated screen called **GPS Info**.
+### ➡️ GPS Info Screens and Features
 
-The goal is to make GPS/GNSS information available while keeping the rest of the Bruce environment.
+The added GPS Info interface provides several views:
 
-Original Bruce Firmware: [Bruce Firmware — GitHub](https://github.com/BruceDevices/firmware)
-
-## Main GPS Info Features
-
-The added **GPS Info** interface provides several screens:
-
-* General GPS information
-* GPS Speed
-* GPS Altitude
-* GPS Time
-* GPS Position
-
-The general GPS Info screen provides information such as:
-
-* Number of satellites
-* HDOP
-* Course
-* Speed
-* Altitude
-* Date and time
-* Timezone
-* Latitude
-* Longitude
-
-## Navigating Between GPS Screens
-
-While inside **GPS Info**, a **short press of Button B** switches between the available GPS screens.
-
-The screens cycle through:
-
-```text
-GPS Info
-   ↓
-GPS Speed
-   ↓
-GPS Altitude
-   ↓
-GPS Time
-   ↓
-GPS Position
-   ↓
-GPS Info
-```
+- **GPS Info:** satellites, HDOP, course, speed, altitude, date and time, timezone, latitude, and longitude.
+- **GPS Speed:** current speed.
+- **GPS Altitude:** current altitude.
+- **GPS Time:** date and time received from the receiver.
+- **GPS Position:** geographic coordinates.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-bruce.gif" alt="Bruce GPS Info Screens" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-bruce.gif" alt="GPS Info screens in Bruce Modified" width="75%">
 </p>
 
-The same navigation can be used in the opposite direction using the corresponding previous/back navigation action supported by Bruce.
+While inside GPS Info, use **"Next"** to move to the next GPS screen and **"Previous"** to return to the previous screen. Use **"Select"** to open the menu.
 
-Press the A button to access the menu. In the menu, you can save data and change the units of measurement for speed and altitude.
+The menu provides the following options:
+- **Save Data:** Saves the current GPS/GNSS data.
+- **Speed Unit:** Changes the speed measurement unit.
+- **Altitude Unit:** Changes the altitude measurement unit.
 
-## Speed and Altitude Units
+When changing the speed or altitude unit, both the displayed unit and the corresponding value are automatically converted to the selected measurement unit.
 
-The GPS Info menu allows you to change:
+Supported units include:
 
-### Speed
+| Measurement | Available units |
+|---|---|
+| Speed | `km/h`, `mph`, `knots`, `m/s` |
+| Altitude | `meters`, `feet` |
 
-* km/h
-* mph
-* knots
-* m/s
+The displayed date and time are based on information from the GPS/GNSS receiver. The receiver provides UTC time, and the timezone configured in Bruce is applied to display local time.
 
-### Altitude
+### ➡️ Saving GPS/GNSS Data
 
-* meters
-* feet
+The modified firmware can save GPS/GNSS information to **LittleFS** or an **SD card**, where supported by the device and firmware setup. When saving, you can specify a place/location name and a file name.
 
-These units are reflected in the GPS information screens and when GPS data is saved.
+To find saved files, open the Bruce file explorer and navigate to the `BruceGPS_data` folder.
 
-## GPS Time
+The saved text file can contain details such as:
 
-The displayed time comes from the **GPS/GNSS module**.
+- Place/location name, local date and time, and timezone.
+- Satellites, HDOP, speed, altitude, and course.
+- Coordinates in decimal degrees, degrees and decimal minutes, and degrees/minutes/seconds.
+- UTC date/time and UTC time in ISO 8601 format.
 
-The module provides UTC time, and the timezone configured in Bruce is applied to display the local date and time.
+### ➡️ Configuring the GPS/GNSS Module
 
-This means that the displayed time depends on:
+In Bruce, open: `GPS → Config`
 
-1. The date and time received from the GPS/GNSS module.
-2. The timezone configured in Bruce.
-
-## Saving GPS/GNSS Data
-
-The modified Bruce firmware can save GPS/GNSS information to:
-
-* **LittleFS**
-* **SD Card**
-
-When saving data, you can define:
-
-* The place/location name
-* The file name
-
-To access the saved file, open the **Bruce file explorer** and navigate to the `BruceGPS_data` folder.
-
-The saved text file contains information such as:
-
-* Place
-* Local date and time
-* Timezone
-* Satellites
-* HDOP
-* Speed
-* Altitude
-* Course
-* Decimal coordinates
-* Degrees and decimal minutes coordinates
-* Degrees, minutes and seconds coordinates
-* UTC date/time
-* UTC ISO 8601 date/time
-
-## GPS/GNSS Configuration in Bruce
-
-The GPS/GNSS module must be configured through the:
-
-```text
-GPS → Config
-```
-
-submenu in Bruce.
-
-The **Baudrate** selected in `Config` must match the baud rate used by the connected GPS/GNSS module.
-
-For this project, the StickS3 GPS UART pins are:
-
-| Function |   GPIO |
-| -------- | -----: |
-| RX       | **44** |
-| TX       | **43** |
+Set the **Baudrate** to match the baud rate configured on the connected module. Follow the pin recommendations to configure RX and TX according to the interface you are using (Hat2-Bus or HY2.0-4P).
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screen-bruce-gps-pins.jpg" alt="Bruce GPS Pins" width="50%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screen-bruce-gps-pins.jpg" alt="GPS pin configuration in Bruce" width="55%">
 </p>
 
-Therefore:
+### ➡️ Installing Bruce from a `.bin` File
 
-```text
-GPS/GNSS TX → StickS3 GPIO 44 (RX)
-GPS/GNSS RX → StickS3 GPIO 43 (TX)
-```
+The modified Bruce firmware is available as precompiled `.bin` files, based on different Bruce releases. Choose one of the following files to download and install:
 
-If the baud rate is incorrect, the firmware may not be able to correctly decode the data received from the module.
+- [`Bruce-v1.16.1.bin`](https://github.com/viniciushnf/StickS3-GPS-GNSS/blob/main/Bruce-v1.16.1.bin) — Based on Bruce firmware version **1.16.1**.
+- [`Bruce-v1.17.bin`](https://github.com/viniciushnf/StickS3-GPS-GNSS/blob/main/Bruce-v1.17.bin) — Based on Bruce firmware version **1.17**.
 
-## Main Features
+The newer version, **Bruce v1.17**, includes additional features and bug fixes compared to v1.16.1. **I recommend using Bruce v1.17**, as it offers the latest improvements and fixes.
 
-* GPS/GNSS information integrated directly into Bruce
-* Keeps the other Bruce features available
-* Dedicated GPS Info screen
-* Multiple GPS information screens
-* Speed and altitude unit selection
-* GPS/GNSS date and time
-* Timezone support
-* GPS/GNSS data export
-* LittleFS and SD Card support for saved data
-* Useful for users who already use Bruce
+Download your preferred `.bin` file from the repository before starting. You can flash it using [Espressif ESP Tool JS](https://espressif.github.io/esptool-js/), a browser-based flashing tool. 
 
-### Available File
+> **Google Chrome is recommended** because it supports the Web Serial features required by the tool.
 
-The modified Bruce firmware is provided as:
+#### 1. Put the StickS3 into programming mode
 
-```text
-Bruce-m5stack-sticks3.bin
-```
+1. Press and hold the StickS3 **Power** button.
+2. Keep holding it until the indicator LED starts blinking.
+3. Connect the StickS3 to your computer with a USB cable.
 
----
+#### 2. Flash the firmware
 
-# 💾 Firmware Installation
+1. Open [ESP Tool JS](https://espressif.github.io/esptool-js/) in Google Chrome.
+2. Connect to the StickS3 and select its serial/COM port.
+3. Select `Bruce-m5stack-sticks3.bin` as the firmware file.
+4. Use the settings below.
+5. Start the flashing process and wait for it to finish.
+6. Restart the StickS3 if it does not restart automatically.
 
-Both firmware options can be installed on the StickS3 using the same flashing procedure with **ESP Tool JS**.
-
-Espressif ESP Tool JS: [https://espressif.github.io/esptool-js/](https://espressif.github.io/esptool-js/)
-
-> **Recommendation:** Use **Google Chrome** when accessing ESP Tool JS, as it generally provides the best Web Serial support for this type of browser-based flashing tool.
-
-## Entering Programming Mode
-
-Before flashing the firmware, the StickS3 must be placed into **download/programming mode**.
-
-1. Press and hold the **Power button**.
-2. Keep the button pressed until the indicator LED starts flashing.
-3. The StickS3 is now ready to be programmed.
-
-## Flashing Procedure
-
-1. Put the StickS3 into programming mode.
-2. Connect the StickS3 to your computer using USB.
-3. Download the desired `.bin` file from this repository.
-4. Open [ESP Tool JS](https://espressif.github.io/esptool-js/).
-5. Set the baud rate to `115200`.
-6. Select the StickS3's **COM port**.
-7. Select the `.bin` file in ESP Tool JS.
-8. Set **Flash Address** to `0x0`.
-9. Set **Flash Mode** to `dio`.
-10. Set **Flash Frequency** to `80m`.
-11. Set **Flash Size** to `8MB`.
-12. Start the flashing process.
-13. Wait for the process to finish.
-14. Restart the StickS3.
-
-## ESP Tool JS screenshots
+| ESP Tool JS setting | Value |
+|---|---|
+| Baud rate | `115200` |
+| Flash address | `0x0` |
+| Flash mode | `dio` |
+| Flash frequency | `80m` |
+| Flash size | `8MB` |
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-1.png" alt="ESPTool 1" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-1.png" alt="ESP Tool JS setup" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-2.png" alt="ESP Tool JS firmware selection" width="70%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-3.png" alt="ESP Tool JS flashing settings" width="70%">
 </p>
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-2.png" alt="ESPTool 2" width="70%">
-</p>
+> **Important:** Make sure you select the correct firmware file and follow the flashing settings above. Installing firmware replaces the firmware currently on the StickS3.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/esptool-3.png" alt="ESPTool 3" width="70%">
-</p>
-
-## Required Settings
-
-When flashing either firmware, use the following settings:
-
-| ESP Tool JS Setting | Value    |
-| ------------------- | -------- |
-| **Baudrate**        | `115200` |
-| **Flash Address**   | `0x0`    |
-| **Flash Mode**      | `dio`    |
-| **Flash Frequency** | `80m`    |
-| **Flash Size**      | `8MB`    |
-
-
-### Firmware Files
-
-| Firmware                  | File                        |
-| ------------------------- | --------------------------- |
-| GPS & GNSS Monitor        | `GPS_GNSS_Monitor.bin`      |
-| Bruce Modified            | `Bruce-m5stack-sticks3.bin` |
-
----
-
-# 🧪 Testing
-
-I performed extensive testing with both firmware options and the GPS/GNSS hardware used during development.
-
-The tests included:
-
-* GPS/GNSS communication
-* Satellite information
-* Position
-* Speed
-* Altitude
-* Course
-* Date and time
-* Timezone conversion
-* GPS/GNSS configuration
-* Display functions
-* Route statistics
-* Distance calculation
-* GPS/GNSS data saving
-* LittleFS storage
-* SD Card storage
-
-Both firmware options worked correctly during my tests.
-
-However, GPS/GNSS performance will always depend on the connected receiver, antenna, environment, satellite visibility, and signal conditions.
+- **Official Bruce website:** [https://bruce.computer/](https://bruce.computer/)
+- **Original Bruce source code:** [BruceDevices/firmware on GitHub](https://github.com/BruceDevices/firmware)
 
 ---
 
