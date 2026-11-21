@@ -161,7 +161,12 @@ The GPS & GNSS Monitor uses two physical buttons to navigate between screens and
 ### ➡️ Main screens
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor main screens" width="50%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor.gif" alt="GPS & GNSS Monitor main screens" width="60%">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-general.gif" alt="General screen layouts" width="20%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-route-stats.gif" alt="Route Stats screen layouts" width="20%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/route-stats-speed.gif" alt="Route Stats screen layouts" width="20%">
 </p>
 
 | Screen | Description |
@@ -178,16 +183,10 @@ The GPS & GNSS Monitor uses two physical buttons to navigate between screens and
 | **About** | Shows firmware information, including the version, selected RX/TX GPIOs, and baud rate. Button A switches to a second view with developer information and the GitHub repository link. |
 | **Settings** | Allows access to the settings screens. |
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-general.gif" alt="General screen layouts" width="25%">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-route-stats.gif" alt="Route Stats screen layouts" width="25%">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/route-stats-speed.gif" alt="Route Stats screen layouts" width="25%">
-</p>
-
 ### ➡️ Settings screens
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor-config.gif" alt="GPS & GNSS Monitor configuration screens" width="50%">
+  <img src="https://raw.githubusercontent.com/viniciushnf/StickS3-GPS-GNSS/refs/heads/main/media/screens-gps-gnss-monitor-config.gif" alt="GPS & GNSS Monitor configuration screens" width="60%">
 </p>
 
 | Setting | Description |
