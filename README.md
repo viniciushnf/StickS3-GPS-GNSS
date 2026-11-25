@@ -400,6 +400,15 @@ You can install M5Launcher using either of the following methods:
 
 > Before starting the installation, put your StickS3 into programming mode by pressing and holding the Power button until the indicator LED starts blinking.
 
+To access the M5Launcher menu, simply press **Button A** while the launcher is starting up, right after turning on your StickS3.
+
+The menu navigation works as follows:
+
+- **Button A - short press:** Move to the next item.
+- **Button A - long press or double press:** Select the highlighted item.
+- **Button B - short press:** Move to the previous item.
+- **Button B - long press or double press:** Go back to the previous menu.
+
 ### ➡️ Installing Firmware Through the WUI
 
 After installing M5Launcher, you can use its **WUI (Web User Interface)** to install both firmware options.
