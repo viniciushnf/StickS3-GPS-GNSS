@@ -432,6 +432,12 @@ After installation, GPS & GNSS Monitor will be available through M5Launcher.
 
 This allows you to keep both firmware options installed on your StickS3 and easily switch between them whenever you need.
 
+### ➡️ Switching Between Installed Firmwares
+
+To switch between installed firmware options, simply press **Button A (the blue button on the StickS3)** while M5Launcher is starting up, right after turning on your device when the **"Launcher"** screen appears.
+
+This will open the M5Launcher menu, where you can navigate through the available options and select the firmware you want to start.
+
 ---
 
 # 👋 Get in touch
