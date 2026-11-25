@@ -385,6 +385,55 @@ Download your preferred `.bin` file from the repository before starting. You can
 
 ---
 
+## 🚀 Installing Multiple Firmwares with M5Launcher
+
+You can install both **GPS & GNSS Monitor** and **Bruce Modified** on the same StickS3 and switch between them whenever you want by using a firmware launcher.
+
+For this, you can use **[Launcher Project (M5Launcher)](https://bmorcelli.github.io/Launcher/)**, which allows you to install and manage multiple firmware options on your device.
+
+### ➡️ Installing M5Launcher
+
+You can install M5Launcher using either of the following methods:
+
+- **Official Web Installer:** [bmorcelli.github.io/Launcher/webflasher.html](https://bmorcelli.github.io/Launcher/webflasher.html)
+- **M5Burner:** [burner.m5stack.com/H7PTFD](https://burner.m5stack.com/H7PTFD)
+
+> Before starting the installation, put your StickS3 into programming mode by pressing and holding the Power button until the indicator LED starts blinking.
+
+### ➡️ Installing Firmware Through the WUI
+
+After installing M5Launcher, you can use its **WUI (Web User Interface)** to install both firmware options.
+
+Follow these steps:
+
+1. Connect your computer to the same Wi-Fi network as your StickS3.
+2. Open the WUI using the IP address displayed on the M5Launcher screen.
+3. Enter the `Username` and `Password` displayed on the StickS3 screen.
+4. After logging in, navigate to **↑ OTA**.
+5. Select the `.bin` firmware file you want to install.
+6. Click **Start Update** to begin the installation.
+7. Wait for the update process to finish, then restart your StickS3.
+
+You can download the precompiled `.bin` files for both **GPS & GNSS Monitor** and **Bruce Modified** directly from this repository.
+
+Repeat the same procedure to install the other firmware. Once both are installed, you can use M5Launcher to choose which firmware to start.
+
+### ➡️ Installing GPS & GNSS Monitor from the Launcher App Store
+
+You can also install **GPS & GNSS Monitor** directly from the M5Launcher firmware catalog, without manually downloading its `.bin` file.
+
+1. Open **OTA** from the M5Launcher interface.
+2. Browse the available firmware list or select **Refine Search**.
+3. Search for `gps`.
+4. Find **GPS & GNSS Monitor (viniciushnf)** in the results.
+5. Select the firmware and follow the installation instructions.
+
+After installation, GPS & GNSS Monitor will be available through M5Launcher.
+
+This allows you to keep both firmware options installed on your StickS3 and easily switch between them whenever you need.
+
+---
+
 # 👋 Get in touch
 
 If you build this project, I'd love to see the result! 
